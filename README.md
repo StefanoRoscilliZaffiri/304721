@@ -76,6 +76,8 @@ To address the significant presence of missing data (which could cause algorithm
 3. *Correlation Analysis:*  
    - We computed and plotted the correlation matrix for our dataset and dropped variables with an absolute correlation < 0.07 with the target variable (Guild_Membership). These low-correlation variables did not provide meaningful information, so removing them made the dataset smaller and improved model performance.
 
+  ![Correlation Matrix!](images/Correlation_Matrix.png 'Correlation Matrix ')
+
 4. *Feature Scaling:*  
    - We firstly tried scaling with the *Standard Scaler* but it worked poorly since we had some outliers left from the cleaning process. So we scaled the features using the *Robust Scaler* because it handles outliers effectively. This ensured that any leftover outliers was taken care of. 
 
