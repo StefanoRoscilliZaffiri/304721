@@ -119,7 +119,7 @@ To address the significant presence of missing data (which could cause algorithm
 4. *Model Performance:*  
    - *CART Trees:* The first model we tried was Cart Trees and it had really bad metrics overall.
      
-    ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
+     ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
    
    - *Random Forest:* It had much better metrics then Cart Trees but struggled with class 2 detection.
      
