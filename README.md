@@ -73,8 +73,14 @@ To address the significant presence of missing data (which could cause algorithm
    - We identified potential outliers using boxplots for numerical columns (excluding binary categorical columns because it would be useless to boxplot them since they do not present outliers). Many columns contained a significant number of outliers.  
    - To handle this, we analyzed the value distributions using histograms and removed outliers based on each column's specific characteristics. This approach ensured minimal loss of valuable information.  
 
-3. *Correlation Analysis:*  
-   - We computed and plotted the correlation matrix for our dataset and dropped variables with an absolute correlation < 0.07 with the target variable (Guild_Membership). These low-correlation variables did not provide meaningful information, so removing them made the dataset smaller and improved model performance.
+3. Correlation Analysis  
+
+- We computed and visualized the correlation matrix for our dataset to assess relationships between variables and the target variable (`Guild_Membership`). 
+- To determine which features to keep, we tested different correlation thresholds, including 0.1, 0.08, 0.07, and 0.06.  
+- Based on these experiments, we decided to drop columns with an absolute correlation value < 0.07 with the target variable. This threshold provided the optimal balance between maintaining useful features and dropping useless ones.  
+- By removing low-correlation variables that did not contribute meaningful information, we reduced the dataset's size and improved model performance.
+
+-Correlation matrix after the drop:
 
   ![Correlation Matrix!](images/Correlation_Matrix.png 'Correlation Matrix ')
 
