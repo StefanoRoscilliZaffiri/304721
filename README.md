@@ -104,8 +104,10 @@ To address the significant presence of missing data (which could cause algorithm
 2. *Stratified Splitting:*
 
    - We tried splitting in two different ways: first we try 80% train set and 20% test set and then we try 70% train set and 30% test set andd we observe that our models work better with the 70-30 split so we decide to:
-             - split the data into training (70%) and test (30%) sets, maintaining the same class distribution thanks to stratification.  
-             - The training set was further divided into training (70%) and validation (30%) subsets for model evaluation.
+     
+       - split the data into training (70%) and test (30%) sets, maintaining the same class distribution thanks to stratification.
+       
+       - The training set was further divided into training (70%) and validation (30%) subsets for model evaluation.
 
 3. *Evaluation Metrics:*  
    - We used the following metrics to evaluate model performance:  
