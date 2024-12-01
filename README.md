@@ -117,10 +117,14 @@ To address the significant presence of missing data (which could cause algorithm
      - *ROC AUC (Area Under the ROC Curve):* Higher values indicate better model performance.
 
 4. *Model Performance:*  
-   - *CART Trees:* First model we tried was Cart Trees and it had really bad metrics overall.  
-   - *Random Forest:* It had much better metrics then Cart Trees but struggled with class 2 detection.  
-   - *Logistic Regression:* Was very similar to Random Forest but a little worse for class 2.  
+   - *CART Trees:* First model we tried was Cart Trees and it had really bad metrics overall.
+    ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
+   - *Random Forest:* It had much better metrics then Cart Trees but struggled with class 2 detection.
+     ![Random Forest Performance!](images/Random_Forest_Perf.png 'Random Forest Performance ')
+   - *Logistic Regression:* Was very similar to Random Forest but a little worse for class 2.
+     ![Logistic Regression Performance!](images/Logistic_Regression_Perf.png 'Logistic Regression Performance ')
    - *KSVM:* Performed worse than Logistic Regression and Random Forest but better than CART Trees overall.
+     ![KSVM Performance!](images/KSVM_Perf.png 'KSVM Performance ')
 
 #### E) Results  
 1. *Hyperparameter Tuning:*  
@@ -131,6 +135,7 @@ To address the significant presence of missing data (which could cause algorithm
      - Logistic Regression excelled in *Recall* for classes 0 and 2.  
      - Random Forest achieved higher *Precision.*  
      - Both models performed similarly for class 1.
+       ![Best RF on Test set!](images/Best_RF_Test.png 'Best RF on test set ') - ![Best LR on test set!](images/Best_LR_Test.png 'Best LR on test set ')
     
 ### F) Full Dataset  
 After training and testing our models on the smaller sample of the dataset, we extended the process to the full dataset.
@@ -145,7 +150,8 @@ After training and testing our models on the smaller sample of the dataset, we e
    - Despite this improvement, challenges remained with class 2 (`Apprentice_Guild`) due to the severe imbalance in the original dataset.
 
 3. **Performance Comparison:**  
-   - Analyzing the performance reports of **Random Forest** and **Logistic Regression**, we observed that **Random Forest** performed better overall on the full dataset.  
+   - Analyzing the performance reports of **Random Forest** and **Logistic Regression**, we observed that **Random Forest** performed better overall on the full dataset.
+     ![Best RF on total df!](images/Best_RF_total.png 'Best RF on total df ') - ![Best LR on total df!](images/Best_LR_total.png 'Best LR on test set ')
 
 **So the winner is...** 🎉 **Random Forest!**
 
