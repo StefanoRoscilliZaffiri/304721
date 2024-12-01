@@ -9,7 +9,7 @@
 What does our project consist of? We have identified ourselves as members of the council of Marendor. Our aim is to anticipate the guild assignment for each scholar by analyzing various factors from the scholars' reports: "guilds." We, of course, need to be careful because we must guide the kingdom's priorities.
 
 ## Methods
-We were given an enormous database containing "only" 31 attributes related to some features of the scholars, with a total of 253,680 rows. Our goal is to train models to classify the type of guilds the scholars will be assigned to: "Apprentice_Guild", "No Guild," or "Master Guild."  
+We were given an enormous database containing 31 attributes related to some features of the scholars, with a total of 253,680 rows. Our goal is to train models to classify the type of guilds the scholars will be assigned to: "Apprentice_Guild", "No Guild," or "Master Guild."  
 The main steps we followed are:
 
 ### 1) Libraries Import
@@ -101,9 +101,11 @@ To address the significant presence of missing data (which could cause algorithm
    - CART Trees  
    - Random Forest  
 
-2. *Stratified Splitting:*  
-   - We split the data into training (70%) and test (30%) sets, maintaining the same class distribution thanks to stratification.  
-   - The training set was further divided into training (70%) and validation (30%) subsets for model evaluation.
+2. *Stratified Splitting:*
+
+   - We tried splitting in two different ways: first we try 80% train set and 20% test set and then we try 70% train set and 30% test set andd we observe that our models work better with the 70-30 split so we decide to:
+             - split the data into training (70%) and test (30%) sets, maintaining the same class distribution thanks to stratification.  
+             - The training set was further divided into training (70%) and validation (30%) subsets for model evaluation.
 
 3. *Evaluation Metrics:*  
    - We used the following metrics to evaluate model performance:  
