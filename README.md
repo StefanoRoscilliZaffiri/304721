@@ -102,10 +102,10 @@ To address the significant presence of missing data (which could cause algorithm
 #### D) Data Modeling  
 1. *Model Selection:*  
    We selected models suitable for classification problems:  
-   - Logistic Regression  
-   - Kernel Support Vector Machines (KSVM)  
-   - CART Trees  
+   - CART trees  
    - Random Forest  
+   - Logistic Regression  
+   - Kernel Support Vector Machines (KSVM) 
 
 2. *Stratified Splitting:*
 
@@ -127,7 +127,7 @@ To address the significant presence of missing data (which could cause algorithm
      - *ROC AUC (Area Under the ROC Curve):* Higher values indicate better model performance.
 
 4. *Model Performance:*  
-   - **CART Trees** : Simple and interpretable but performed poorly on our dataset with low metrics across all classes.  
+   - **CART Trees** : Simple and fast but performed poorly on our dataset with low metrics across all classes.  
 
      ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
    
