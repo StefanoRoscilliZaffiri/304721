@@ -127,21 +127,32 @@ To address the significant presence of missing data (which could cause algorithm
      - *ROC AUC (Area Under the ROC Curve):* Higher values indicate better model performance.
 
 4. *Model Performance:*  
-   - **CART Trees** : Simple and fast but performed poorly on our dataset with low metrics across all classes.  
+   - **CART Trees** : We decided to try Cart Trees because they can be used for classification tasks. However, we anticipated that their performance might not be optimal for our problem due to the complexity of our target variable, which has three distinct classes (No_Guild, Master_Guild, and Apprentice_Guild), and due to the severe unbalancing of our dataset.
 
-     ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
+     ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Cart Trees Performance ')
+
+     We can observe that Cart trees have low accuracy and overall bad performance.
    
-   - **Random Forest** : Improved significantly compared to CART Trees, especially in precision and recall, but struggled to detect instances of Class 2.  
+   - **Random Forest** : We then decided to try Random Forest because it combines multiple decision trees to improve classification accuracy and robustness. Random Forest handles multi-class target variables effectively and is less prone to overfitting issues that we had with single decision trees.
+     Given our dataset's imbalanced nature and the presence of both numerical and categorical features, Random Forest seemed to be a good choice. We anticipated good performance, especially on the majority class, while having potential challenges in correctly classifying minority classes.  
 
      ![Random Forest Performance!](images/Random_Forest_Perf.png 'Random Forest Performance ')
+
+     We see that they overall perform better than Cart Trees but have some problems with detecting class 2.
      
-   - **Logistic Regression** : Performed similarly to Random Forest with slightly lower performance on Class 2 but comparable metrics overall.
+   - **Logistic Regression** : We included Logistic Regression as it is a simple yet effective algorithm for multi-class classification problems. Using its multinomial configuration, it could become a good model to use for this problem.
+     Although Logistic Regression is less flexible than tree-based models like Random Forest, it is computationally efficient and interpretable. However, we anticipated that its linear functions might limit its ability to capture complex patterns in our data.
 
      ![Logistic Regression Performance!](images/Logistic_Regression_Perf.png 'Logistic Regression Performance ')
+
+      It performed similarly to Random Forest with slightly lower performance on Class 2 but comparable metrics overall.
      
-   - **KSVM (Kernel Support Vector Machine)** : Performed better than CART Trees but did not match the accuracy or precision of Random Forest or Logistic Regression. Its non-linear decision boundary was useful, but computationally expensive on larger datasets.
+   - **KSVM (Kernel Support Vector Machine)** : We selected KSVM because it is well-suited for handling classification problems where the decision boundary between classes is non-linear. By using the kernel trick, KSVM maps the original data into a higher-dimensional space where the classes can become linearly separable.
+     While KSVM is powerful for non-linear problems, it is computationally expensive, especially with large datasets like ours. We thought that KSVM might perform well on specific classes but struggle with scalability and imbalanced data.
      
      ![KSVM Performance!](images/KSVM_Perf.png 'KSVM Performance ')
+
+     Performed better than CART Trees but did not match the accuracy or precision of Random Forest or Logistic Regression. Its non-linear decision boundary was useful, but computationally expensive on larger datasets.
 
 #### E) Results  
 1. *Hyperparameter Tuning:*  
