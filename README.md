@@ -127,19 +127,19 @@ To address the significant presence of missing data (which could cause algorithm
      - *ROC AUC (Area Under the ROC Curve):* Higher values indicate better model performance.
 
 4. *Model Performance:*  
-   - *CART Trees:* The first model we tried was Cart Trees and it had really bad metrics overall.
-     
+   - **CART Trees** : Simple and interpretable but performed poorly on our dataset with low metrics across all classes.  
+
      ![Cart Trees Performance!](images/Cart_Trees_Perf.png 'Carte Trees Performance ')
    
-   - *Random Forest:* It had much better metrics then Cart Trees but struggled with class 2 detection.
-     
+   - **Random Forest** : Improved significantly compared to CART Trees, especially in precision and recall, but struggled to detect instances of Class 2.  
+
      ![Random Forest Performance!](images/Random_Forest_Perf.png 'Random Forest Performance ')
      
-   - *Logistic Regression:* Was very similar to Random Forest but a little worse for class 2.
-     
+   - **Logistic Regression** : Performed similarly to Random Forest with slightly lower performance on Class 2 but comparable metrics overall.
+
      ![Logistic Regression Performance!](images/Logistic_Regression_Perf.png 'Logistic Regression Performance ')
      
-   - *KSVM:* Performed worse than Logistic Regression and Random Forest but better than CART Trees overall.
+   - **KSVM (Kernel Support Vector Machine)** : Performed better than CART Trees but did not match the accuracy or precision of Random Forest or Logistic Regression. Its non-linear decision boundary was useful, but computationally expensive on larger datasets.
      
      ![KSVM Performance!](images/KSVM_Perf.png 'KSVM Performance ')
 
