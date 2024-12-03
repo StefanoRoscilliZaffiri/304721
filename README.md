@@ -37,8 +37,9 @@ We started by reading our CSV file and examining the composition of our database
 3. *Database Size Reduction:*  
 Considering the size of our dataset and the need to remove the imbalance, we followed these steps to resize the data:
 
-1. **Dropped all rows where the target Guild_Membership attribute was empty.**
-2. *Dropped rows based on missing values thresholds:*
+    1) **Dropped all rows where the target Guild_Membership attribute was empty.**
+   
+    2) *Dropped rows based on missing values thresholds:*
    - For Guild_Membership = "Master_Guild", rows with 5 or more missing values were removed.
    - For Guild_Membership = "No_Guild", rows with 3 or more missing values were removed.
    - This stricter threshold for No_Guild was necessary because it was the most prominent class, contributing significantly to the imbalance.
